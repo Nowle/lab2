@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фоторедактор</title>
+</head>
+<body>
+<canvas id="c"></canvas>
+<form name="redactor" action="test">
+    <p><b>Загрузите изображение</b><br>
+        <input type="file" accept="image/jpeg, image/png" title="Форматы jpeg и png" id="Image" >
+    </p>
+    <p><b>Требуемая ширина</b><br>
+        <input type="text"  pattern="[1-9]{1}[0-9]{0,3}"  title="Целое число больше нуля" id="width">
+    </p>
+    <p><b>Требуемая высота</b><br>
+        <input type="text" pattern="[1-9]{1}[0-9]{0,3}" title="Целое число больше нуля" id="height">
+    </p>
+    <p><b>Фильтр</b><br>
+     <select>
+        <option>Перевод в черно-белое</option>
+        <option>Отразить по вертикали</option>
+        <option>Отразить по горизонтали</option>
+        <option>Повернуть на 90 градусов влево</option>
+        <option>Повернуть на 90 градусов вправо</option>
+        <option>Бинаризация по порог</option>
+     </select>
+    </p>
+    <input type="submit" value="Отправить" onclick="ShowImage()">
+</form>
+</body>
+<script src="js.js"></script>
+</html>
